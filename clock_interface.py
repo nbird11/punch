@@ -132,21 +132,21 @@ class ClockInterface:
     def display_state(self):
         punch_state = self.check_punch_state()
         break_state = self.check_break_state()
-        available_commands = ["in", "out", "break in", "break out", "state"]
+        available_commands = ["in", "out", "break start", "break end", "state"]
         if punch_state == PUNCHED_IN_STATE:
             available_commands.remove("in")
             if break_state == BREAK_IN_STATE:
-                available_commands.remove("break in")
+                available_commands.remove("break start")
                 available_commands.remove("out")
             elif break_state == BREAK_OUT_STATE:
-                available_commands.remove("break out")
+                available_commands.remove("break end")
             print(f"\nCurrent state of TimeLog is {punch_state}: {break_state}.")
             print(f"Available commmands are: {available_commands}\n")
 
         elif punch_state == PUNCHED_OUT_STATE:
             available_commands.remove("out")
-            available_commands.remove("break in")
-            available_commands.remove("break out")
+            available_commands.remove("break start")
+            available_commands.remove("break end")
             print(f"\nCurrent state of TimeLog is {punch_state}.")
             print(f"Available commmands are: {available_commands}\n")
 
