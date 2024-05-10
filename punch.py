@@ -1,7 +1,7 @@
 import sys
 from datetime import datetime
 
-from timelog import ClockInterface
+from clock_interface import ClockInterface
 import utils
 from utils import (
     PUNCHED_IN_STATE,
