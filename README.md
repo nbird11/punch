@@ -86,8 +86,8 @@ Options:
     Output should look similar to this:
     ```
     README.md          clock_interface.py punch.py
-    build              dist               timelog.py
-    build.sh           log_entry.py       utils.py
+    build              dist               utils.py
+    build.sh           log_entry.py
     ```
     Just make sure there is a `build/` and a `dist/` directory.
 
