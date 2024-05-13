@@ -2,6 +2,31 @@
 
 CLI work clocking system.
 
+## Usage/Commands
+
+```
+Usage: punch <command> [options]
+
+Commands:
+  in                Record punch-in time
+  break             Start or stop a break
+    start             Record break start time
+    end               Record break end time
+  out               Record punch-out time
+  state             Output the current state of the TimeLog
+    --index           Default index=1. Index from the head entry
+    --hours           Default hours=8. How long the work day is
+
+Coming soon:
+  reveal            Open a program to manually edit the contents of .clock
+
+Options:
+  -h, --help        Show this usage menu
+  --debug           Run with debug messages
+
+
+```
+
 ## Setup
 
 ### Mac/Linux (UNIX):
@@ -90,9 +115,41 @@ CLI work clocking system.
 
         (The `punch` executable file should be located in the `dist/punch/` dir)
 
-1. Restart your terminal
+1. Restart your terminal.
 
-1. Verify that the punch CLI works by running `punch -h`
+1. Verify that the punch CLI works by running `punch -h`.
+
+    Output:
+    ```
+    user@host:~/dev/python/punch-mac % punch -h
+
+    Usage: punch <command> [options]
+
+    Commands:
+      in                Record punch-in time
+      break             Start or stop a break
+        start             Record break start time
+        end               Record break end time
+      out               Record punch-out time
+      state             Output the current state of the TimeLog
+        --index           Default index=1. Index from the head entry
+        --hours           Default hours=8. How long the work day is
+
+    Coming soon:
+      reveal          Open a program to manually edit the contents of .clock
+
+    Removed:
+      show                      Output the contents of the .clock file
+      upload                    Upload current .csv file to Google Sheets worksheet
+      email                     Display the service email account
+      --desc "[description]"    Add or replace existing work description
+
+    Options:
+      -h, --help        Show this usage menu
+      --debug           Run with debug messages
+
+    user@host:~/dev/python/punch-mac % 
+    ```
 
 <hr>
 
@@ -171,9 +228,9 @@ CLI work clocking system.
 
         (`punch.exe` should be located in the `dist/punch/` dir within the project folder)
 
-1. Restart your terminal
+1. Restart your terminal.
 
-1. Verify that the punch CLI works by running `punch -h`
+1. Verify that the punch CLI works by running `punch -h`.
 
 
 ## Features
